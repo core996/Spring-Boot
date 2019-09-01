@@ -10,13 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>Web</artifactId>
-    <dependencies>
-        <!-- spring boot web 启动 s -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <!-- spring boot web 启动 e -->
-    </dependencies>
 
+    <dependencies>
+
+    </dependencies>
 </project>

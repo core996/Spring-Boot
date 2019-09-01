@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.96.248.24:3306/cloud?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useAffectedRows=false&useSSL=false
+    username: root
+    password: Wuxin123
+    dbcp2:
+      min-idle: 5
+      initial-size: 3
+      max-total: 5
+      max-wait-millis: 100
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml  # MyBatis的核心配置文件
+  mapper-locations:
+    - classpath:mapper/**/*.xml

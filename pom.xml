@@ -10,12 +10,123 @@
     <version>1.0</version>
     <modules>
         <module>Web</module>
+        <module>Mybatis</module>
     </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- jdk 版本 -->
+        <java.version>1.8</java.version>
+        <!--Spring Boot 版本 -->
+        <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
+        <!-- springboot mybatis -->
+        <springboot.mybatis.version>2.1.0</springboot.mybatis.version>
+        <!-- mysql驱动版本 -->
+        <mysql.version>5.1.47</mysql.version>
+        <!-- 关于数据库的相关配置-->
+        <druid.version>1.1.17</druid.version>
+    </properties>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.6.RELEASE</version>
     </parent>
+
+    <dependencies>
+        <!-- spring boot web 启动 s -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- spring boot web 启动 e -->
+        <!--测试配置 s -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!--测试配置 e -->
+
+        <!--  日志配置 s-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
+        <!--  日志配置 e-->
+    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-dependencies</artifactId>-->
+<!--                <version>${spring-boot.version}</version>-->
+<!--                <type>pom</type>-->
+<!--                <scope>import</scope>-->
+<!--            </dependency>-->
+
+            <!-- Spring AOP s -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+            </dependency>
+            <!-- Spring AOP e-->
+
+            <!-- Spring boot mybatis s -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${springboot.mybatis.version}</version>
+            </dependency>
+            <!-- Spring boot mybatis e -->
+
+            <!-- Spring boot redis s-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+            </dependency>
+            <!-- Spring boot redis e-->
+
+            <!-- 日志组件 s -->
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+            </dependency>
+            <!-- 日志组件 e -->
+
+            <!-- mysql 驱动版本 s -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <!-- mysql 驱动版本 e -->
+
+            <!--Druid连接池 s-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <!--Druid连接池 e-->
+
+            <!-- Redis 数据库连接池 s -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+            </dependency>
+            <!-- Redis 数据库连接池 e -->
+
+        </dependencies>
+    </dependencyManagement>
+
+
+
     <build>
         <plugins>
             <plugin>
