@@ -6,7 +6,15 @@
 
     <groupId>core.study</groupId>
     <artifactId>Spring-Boot</artifactId>
+    <packaging>pom</packaging>
     <version>1.0</version>
-
+    <modules>
+        <module>Web</module>
+    </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.6.RELEASE</version>
+    </parent>
 
 </project>
