@@ -11,6 +11,7 @@
     <modules>
         <module>Web</module>
         <module>Mybatis</module>
+        <module>Redis</module>
     </modules>
 
     <properties>
@@ -25,6 +26,8 @@
         <mysql.version>5.1.47</mysql.version>
         <!-- 关于数据库的相关配置-->
         <druid.version>1.1.17</druid.version>
+        <!-- redis数据库连接池配置  -->
+        <commons.pool2.version>2.6.2</commons.pool2.version>
     </properties>
 
     <parent>
@@ -34,6 +37,7 @@
     </parent>
 
     <dependencies>
+
         <!-- spring boot web 启动 s -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -85,12 +89,7 @@
             </dependency>
             <!-- Spring boot mybatis e -->
 
-            <!-- Spring boot redis s-->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-data-redis</artifactId>
-            </dependency>
-            <!-- Spring boot redis e-->
+
 
             <!-- 日志组件 s -->
             <dependency>
@@ -119,6 +118,7 @@
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-pool2</artifactId>
+                <version>${commons.pool2.version}</version>
             </dependency>
             <!-- Redis 数据库连接池 e -->
 
