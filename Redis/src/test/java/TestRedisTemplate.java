@@ -30,4 +30,9 @@ public class TestRedisTemplate {
         map.put("w2","core") ;
         this.redisTemplate.opsForValue().set("1",map);
     }
+
+    @Test
+    public void testGet(){
+        System.out.println(this.redisTemplate.opsForValue().get("1"));
+    }
 }

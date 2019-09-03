@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="core.study.dao.IDeptDAO">
+    <sql id="selectBase">
+        SELECT deptno,dname,loc FROM dept
+    </sql>
+    <insert id="doCreate" parameterType="Dept" keyProperty="deptno" useGeneratedKeys="true">
+        INSERT INTO dept(dname,loc) VALUES (#{dname},#{loc}) ;
+    </insert>
+    <select id="findAll" resultType="Dept">
+        <include refid="selectBase"></include>
+    </select>
+    <select id="findById" resultType="Dept" parameterType="long" >
+        <include refid="selectBase"/>
+        <where>
+            deptno=#{deptno}
+        </where>
+    </select>
+</mapper>

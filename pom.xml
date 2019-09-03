@@ -12,6 +12,7 @@
         <module>Web</module>
         <module>Mybatis</module>
         <module>Redis</module>
+        <module>Dept-Server</module>
     </modules>
 
     <properties>
@@ -74,12 +75,7 @@
 <!--                <scope>import</scope>-->
 <!--            </dependency>-->
 
-            <!-- Spring AOP s -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-aop</artifactId>
-            </dependency>
-            <!-- Spring AOP e-->
+
 
             <!-- Spring boot mybatis s -->
             <dependency>
@@ -91,12 +87,7 @@
 
 
 
-            <!-- 日志组件 s -->
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-core</artifactId>
-            </dependency>
-            <!-- 日志组件 e -->
+
 
             <!-- mysql 驱动版本 s -->
             <dependency>
