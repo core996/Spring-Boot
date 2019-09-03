@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: micro-dept #服务名称
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
@@ -16,3 +18,13 @@ mybatis:
     - classpath:mapper/**/*.xml
 server:
   port: 8001
+eureka: # Eureka注册中心配置
+  instance:
+    instance-id: dept-server01 #注册id
+    lease-expiration-duration-in-seconds: 1 #服务过期时间
+    lease-renewal-interval-in-seconds: 1 #服务刷新时间
+    ip-address: dept-server01 # 地址
+    hostname: dept-server01 # 主机名称
+  client:
+    service-url:
+      defaultZone: http://eureka-server:7001/eureka/
