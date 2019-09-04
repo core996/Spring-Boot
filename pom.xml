@@ -15,6 +15,8 @@
         <module>Dept-Server</module>
         <module>Eureka</module>
         <module>Ribbon</module>
+        <module>Feign</module>
+        <module>common</module>
     </modules>
 
     <properties>
@@ -42,6 +44,14 @@
     </parent>
 
     <dependencies>
+
+        <!-- 程序自己定义公共信息 s-->
+        <dependency>
+            <groupId>core.study</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!-- 公共信息 e-->
 
         <!-- spring boot web 启动 s -->
         <dependency>
@@ -76,6 +86,8 @@
             <artifactId>spring-boot-starter-logging</artifactId>
         </dependency>
         <!--  日志配置 e-->
+
+
     </dependencies>
     <dependencyManagement>
         <dependencies>

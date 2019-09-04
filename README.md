@@ -6,3 +6,4 @@ Spring Boot 与各种服务的整合<br>
 - Dept 微服务
 - Eureka注册中心
 - Ribbon 负载均衡
+- Feign 客户端 
