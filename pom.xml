@@ -14,6 +14,7 @@
         <module>Redis</module>
         <module>Dept-Server</module>
         <module>Eureka</module>
+        <module>Ribbon</module>
     </modules>
 
     <properties>

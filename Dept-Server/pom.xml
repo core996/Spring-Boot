@@ -12,10 +12,14 @@
     <artifactId>Dept-Server</artifactId>
     <dependencies>
 
+        <!--  Eureka 客户端 s-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
+        <!--  Eureka 客户端 e-->
+
+
 
         <!-- Spring AOP s -->
         <dependency>
