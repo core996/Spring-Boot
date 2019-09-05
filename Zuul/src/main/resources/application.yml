@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: micro-zuul-gateway    # zuul一定要向eureka中进行注册
+server:
+  port: 8501
+eureka:
+  client:
+    service-url:
+      defaultZone:
+        http://eureka-server:7001/eureka/
+  instance:
+    instance-id: zuul-server01
+    ip-address: zuul-server01
+    hostname: zuul-server01
+zuul:
+  routes:
+    model-api:
+      path: /dept/**   # 映射路径
+      serviceId: micro-dept  #微服务名称
