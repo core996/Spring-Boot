@@ -31,7 +31,7 @@
         <!-- springboot mybatis -->
         <springboot.mybatis.version>2.1.0</springboot.mybatis.version>
         <!-- mysql驱动版本 -->
-        <mysql.version>5.1.47</mysql.version>
+        <mysql.version>8.0.16</mysql.version>
         <!-- 关于数据库的相关配置-->
         <druid.version>1.1.17</druid.version>
         <!-- redis数据库连接池配置  -->
